@@ -4,7 +4,7 @@ let loading = false
 
 const getNotesFromBackend = async () => {
   loading = true
-  const res = await fetch('http://localhost:5000/notes')
+  const res = await fetch('https://notion-nodejs.onrender.com/notes')
   const data = await res.json()
   loading = false
   return data
