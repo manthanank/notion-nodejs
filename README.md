@@ -16,3 +16,5 @@ Add your notion secret token and the database id to the .env-example file and re
 npm install
 npm start
 ```
+
+Reference - [Link](https://youtu.be/9JdP-S3crt8)
