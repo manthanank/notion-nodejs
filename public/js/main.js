@@ -4,7 +4,7 @@ let loading = false
 
 const getNotesFromBackend = async () => {
   loading = true
-  localUrl = 'http://localhost:5000/api/notes'
+  localUrl = 'https://notion-nodejs.vercel.app/api/notes'
   prodUrl = 'notion-nodejs.onrender.com/notes'
   URL = window.location.hostname === 'localhost' ? localUrl : prodUrl
   const res = await fetch(URL)
