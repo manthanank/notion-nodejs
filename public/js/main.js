@@ -5,7 +5,7 @@ let loading = false
 const getNotesFromBackend = async () => {
   loading = true
   localUrl = 'http://localhost:5000/api/notes'
-  prodUrl = 'http://localhost:5000/api/notes'
+  prodUrl = 'notion-nodejs.onrender.com/notes'
   URL = window.location.hostname === 'localhost' ? localUrl : prodUrl
   const res = await fetch(URL)
   const data = await res.json()
