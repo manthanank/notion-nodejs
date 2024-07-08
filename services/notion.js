@@ -22,7 +22,7 @@ module.exports = {
         id: page.id,
         title: page.properties.Name.title[0].text.content,
         date: page.properties.Date.date.start,
-        tags: page.properties.Tags.rich_text[0].text.content,
+        tags: page.properties.Tags.select.name,
         description: page.properties.Description.rich_text[0].text.content,
       }
     })
@@ -52,13 +52,9 @@ module.exports = {
             },
           },
           Tags: {
-            rich_text: [
-              {
-                text: {
-                  content: tags,
-                },
-              },
-            ],
+            "select": {
+              "name": tags
+            }
           },
           Description: {
             rich_text: [
@@ -92,7 +88,7 @@ module.exports = {
       const note = {
         id: response.id,
         title: response.properties.Name.title[0].text.content,
-        tags: response.properties.Tags.rich_text[0].text.content,
+        tags: response.properties.Tags.select.name,
         description: response.properties.Description.rich_text[0].text.content,
       };
       return note;
@@ -122,13 +118,9 @@ module.exports = {
             },
           },
           Tags: {
-            rich_text: [
-              {
-                text: {
-                  content: tags,
-                },
-              },
-            ],
+            select: {
+              name: tags,
+            },
           },
           Description: {
             rich_text: [
